@@ -2,7 +2,7 @@
 
 Run this command in PowerShell:
 
-powershell -ExecutionPolicy Bypass -File .\install-latest.ps1 -RevitYear 2025
+powershell -ExecutionPolicy Bypass -File .\install-latest.ps1 -RevitYear 2025 -VersionJsonUrl "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/main/version.json"
 
 Default install scope is current Windows user:
 %APPDATA%\Autodesk\Revit\Addins\2025

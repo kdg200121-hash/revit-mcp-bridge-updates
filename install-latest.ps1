@@ -1,6 +1,6 @@
 param(
     [string]$RevitYear = "2025",
-    [string]$VersionJsonUrl = "",
+    [string]$VersionJsonUrl = "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/main/version.json",
     [string]$InstallRoot = "$env:LOCALAPPDATA\SeesumAI\RevitMcpBridge",
     [switch]$AllUsers
 )
@@ -136,6 +136,7 @@ $manifest = @"
 Set-Content -LiteralPath $manifestPath -Value $manifest -Encoding UTF8
 
 Write-Host ""
+Write-Host "설치가 완료되었습니다."
 Write-Host "Installed Seesum AI Revit add-in."
 Write-Host "Manifest: $manifestPath"
 Write-Host "Assembly: $assemblyPath"
