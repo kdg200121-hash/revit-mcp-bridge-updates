@@ -29,8 +29,7 @@ function Read-VersionInfo {
         return Invoke-RestMethod -Uri $Url -UseBasicParsing -TimeoutSec 15
     }
     catch {
-        Write-Warning "Could not read online version info. Installing bundled package. $($_.Exception.Message)"
-        return $null
+        throw "Could not read online version info: $($_.Exception.Message)"
     }
 }
 
@@ -74,12 +73,11 @@ function Download-Package {
     param([string]$PackageUrl)
 
     if ([string]::IsNullOrWhiteSpace($PackageUrl)) {
-        return $null
+        throw "Latest package URL was not found in version info."
     }
 
     if ($PackageUrl -notmatch "\.zip($|\?)") {
-        Write-Warning "Latest package URL is not a zip file. Installing bundled package instead: $PackageUrl"
-        return $null
+        throw "Latest package URL is not a zip file: $PackageUrl"
     }
 
     $tempPackage = Join-Path $env:TEMP ("RevitMcpBridge-" + [Guid]::NewGuid().ToString("N") + ".zip")
@@ -90,11 +88,9 @@ function Download-Package {
 }
 
 $scriptRoot = Get-ScriptRoot
-$bundlePackage = Join-Path $scriptRoot "RevitMcpBridge-package.zip"
 $versionInfo = Read-VersionInfo -Url $VersionJsonUrl
 $packageUrl = Get-PackageFromVersionInfo -VersionInfo $versionInfo
-$downloadedPackage = Download-Package -PackageUrl $packageUrl
-$packagePath = if ($downloadedPackage) { $downloadedPackage } else { $bundlePackage }
+$packagePath = Download-Package -PackageUrl $packageUrl
 
 if (-not (Test-Path -LiteralPath $packagePath)) {
     throw "Install package was not found: $packagePath"
