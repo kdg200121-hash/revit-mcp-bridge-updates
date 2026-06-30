@@ -3,6 +3,6 @@
   "latestVersion": "1.0.2",
   "minSupportedVersion": "1.0.2",
   "downloadUrl": "https://github.com/kdg200121-hash/revit-mcp-bridge-updates",
-  "installerPackageUrl": "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/main/RevitMcpBridge-package.zip",
+  "installerPackageUrl": "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/bdd4dc9/RevitMcpBridge-package.zip",
   "releaseNote": "1.0.2 배포 버전입니다."
 }
