@@ -88,9 +88,17 @@ function Download-Package {
 }
 
 $scriptRoot = Get-ScriptRoot
-$versionInfo = Read-VersionInfo -Url $VersionJsonUrl
-$packageUrl = Get-PackageFromVersionInfo -VersionInfo $versionInfo
-$packagePath = Download-Package -PackageUrl $packageUrl
+$localPackagePath = Join-Path $scriptRoot "RevitMcpBridge-package.zip"
+if (Test-Path -LiteralPath $localPackagePath) {
+    Write-Host "Using bundled install package:"
+    Write-Host $localPackagePath
+    $packagePath = $localPackagePath
+}
+else {
+    $versionInfo = Read-VersionInfo -Url $VersionJsonUrl
+    $packageUrl = Get-PackageFromVersionInfo -VersionInfo $versionInfo
+    $packagePath = Download-Package -PackageUrl $packageUrl
+}
 
 if (-not (Test-Path -LiteralPath $packagePath)) {
     throw "Install package was not found: $packagePath"

@@ -1,8 +1,8 @@
 {
   "appName": "RevitMcpBridge",
-  "latestVersion": "1.0.3",
-  "minSupportedVersion": "1.0.3",
+  "latestVersion": "1.1.0",
+  "minSupportedVersion": "1.1.0",
   "downloadUrl": "https://github.com/kdg200121-hash/revit-mcp-bridge-updates",
   "installerPackageUrl": "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/aeb058f/RevitMcpBridge-package.zip",
-  "releaseNote": "1.0.3 배포 버전입니다."
+  "releaseNote": "1.1.0 배포 버전입니다."
 }

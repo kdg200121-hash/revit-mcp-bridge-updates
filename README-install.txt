@@ -11,5 +11,5 @@ Default install scope is current Windows user:
 To install for all users, run PowerShell as Administrator and add:
 -AllUsers
 
-The installer checks version.json and installs the latest zip package from installerPackageUrl, packageUrl, or downloadUrl.
-The package zip is not bundled in this installer. If the online check or download fails, installation stops.
+The installer first uses the bundled RevitMcpBridge-package.zip in this folder.
+If the bundled package is missing, it checks version.json and installs the latest zip package from installerPackageUrl, packageUrl, or downloadUrl.
