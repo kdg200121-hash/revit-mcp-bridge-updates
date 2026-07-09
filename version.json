@@ -1,10 +1,10 @@
 {
   "appName": "RevitMcpBridge",
-  "latestVersion": "1.1.3.1",
-  "latestDisplayVersion": "1.1.3a",
-  "minSupportedVersion": "1.1.3.1",
-  "minSupportedDisplayVersion": "1.1.3a",
+  "latestVersion": "1.1.3.2",
+  "latestDisplayVersion": "1.1.3b",
+  "minSupportedVersion": "1.1.3.2",
+  "minSupportedDisplayVersion": "1.1.3b",
   "downloadUrl": "https://github.com/kdg200121-hash/revit-mcp-bridge-updates",
   "installerPackageUrl": "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/e56e141e75b47b09300f352b04a40bc1f5587af4/RevitMcpBridge-package.zip",
-  "releaseNote": "1.1.3a 업데이트: MCP 로컬 연결이 실패해도 업데이트 후 애드인 리본과 일반 기능이 계속 로드되도록 수정했습니다."
+  "releaseNote": "1.1.3b 업데이트: 기존 1.1.2a 업데이트 코드가 찾는 RevitMcpBridge.dll 호환 파일을 패키지에 함께 포함했습니다."
 }
