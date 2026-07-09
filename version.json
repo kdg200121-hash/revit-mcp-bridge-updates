@@ -1,10 +1,10 @@
-﻿{
-    "appName":  "RevitMcpBridge",
-    "latestVersion":  "1.1.2.1",
-    "latestDisplayVersion":  "1.1.2a",
-    "minSupportedVersion":  "1.1.2.1",
-    "minSupportedDisplayVersion":  "1.1.2a",
-    "downloadUrl":  "https://github.com/kdg200121-hash/revit-mcp-bridge-updates",
-    "installerPackageUrl":  "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/bbfc913/RevitMcpBridge-package.zip",
-    "releaseNote":  "1.1.2a 배포 버전입니다. 새 사용설명서가 포함되었고 업데이트 설치 창의 한글 표시를 유지합니다."
+{
+  "appName": "RevitMcpBridge",
+  "latestVersion": "1.1.3",
+  "latestDisplayVersion": "1.1.3",
+  "minSupportedVersion": "1.1.3",
+  "minSupportedDisplayVersion": "1.1.3",
+  "downloadUrl": "https://github.com/kdg200121-hash/revit-mcp-bridge-updates",
+  "installerPackageUrl": "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/3ba9498/RevitMcpBridge-package.zip",
+  "releaseNote": "1.1.3 업데이트: 사용설명서 버튼이 Notion 설명서로 연결되도록 반영했습니다."
 }

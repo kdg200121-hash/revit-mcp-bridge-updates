@@ -7,6 +7,20 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+try {
+    [Console]::OutputEncoding = New-Object System.Text.UTF8Encoding $false
+    $OutputEncoding = [Console]::OutputEncoding
+    chcp 65001 | Out-Null
+}
+catch {
+}
+
+function New-UnicodeText {
+    param([int[]]$CodePoints)
+
+    return -join ($CodePoints | ForEach-Object { [char]$_ })
+}
+
 function Get-ScriptRoot {
     if ($PSScriptRoot) {
         return $PSScriptRoot
@@ -108,9 +122,9 @@ $installDir = Join-Path $InstallRoot $RevitYear
 $payloadDir = Join-Path $installDir "payload"
 Expand-Package -PackagePath $packagePath -Destination $payloadDir
 
-$assemblyPath = Join-Path $payloadDir "RevitMcpBridge.dll"
+$assemblyPath = Join-Path $payloadDir "SeesumAI.RevitMcpBridge.dll"
 if (-not (Test-Path -LiteralPath $assemblyPath)) {
-    throw "RevitMcpBridge.dll was not found in package: $assemblyPath"
+    throw "SeesumAI.RevitMcpBridge.dll was not found in package: $assemblyPath"
 }
 
 if ($AllUsers) {
@@ -140,7 +154,7 @@ $manifest = @"
 Set-Content -LiteralPath $manifestPath -Value $manifest -Encoding UTF8
 
 Write-Host ""
-Write-Host "설치가 완료되었습니다."
+Write-Host (New-UnicodeText @(0xC124, 0xCE58, 0xAC00, 0x20, 0xC644, 0xB8CC, 0xB418, 0xC5C8, 0xC2B5, 0xB2C8, 0xB2E4, 0x2E))
 Write-Host "Installed Seesum AI Revit add-in."
 Write-Host "Manifest: $manifestPath"
 Write-Host "Assembly: $assemblyPath"
