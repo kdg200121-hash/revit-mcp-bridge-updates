@@ -101,30 +101,38 @@ function Download-Package {
     return $tempPackage
 }
 
-$scriptRoot = Get-ScriptRoot
-$localPackagePath = Join-Path $scriptRoot "RevitMcpBridge-package.zip"
-if (Test-Path -LiteralPath $localPackagePath) {
-    Write-Host "Using bundled install package:"
-    Write-Host $localPackagePath
-    $packagePath = $localPackagePath
-}
-else {
-    $versionInfo = Read-VersionInfo -Url $VersionJsonUrl
-    $packageUrl = Get-PackageFromVersionInfo -VersionInfo $versionInfo
-    $packagePath = Download-Package -PackageUrl $packageUrl
-}
+$versionInfo = Read-VersionInfo -Url $VersionJsonUrl
+$packageUrl = Get-PackageFromVersionInfo -VersionInfo $versionInfo
+$packagePath = Download-Package -PackageUrl $packageUrl
 
 if (-not (Test-Path -LiteralPath $packagePath)) {
     throw "Install package was not found: $packagePath"
 }
 
 $installDir = Join-Path $InstallRoot $RevitYear
-$payloadDir = Join-Path $installDir "payload"
+$expectedHash = [string]$versionInfo.installerPackageSha256
+if (-not [string]::IsNullOrWhiteSpace($expectedHash)) {
+    $actualHash = (Get-FileHash -LiteralPath $packagePath -Algorithm SHA256).Hash
+    $normalizedExpectedHash = ($expectedHash -replace '[^0-9A-Fa-f]', '').ToUpperInvariant()
+    if ($actualHash -ne $normalizedExpectedHash) {
+        throw "Downloaded package SHA-256 does not match version info."
+    }
+}
+
+$payloadDir = Join-Path $installDir ("payload-" + (Get-Date -Format "yyyyMMdd-HHmmss"))
 Expand-Package -PackagePath $packagePath -Destination $payloadDir
 
 $assemblyPath = Join-Path $payloadDir "SeesumAI.RevitMcpBridge.dll"
 if (-not (Test-Path -LiteralPath $assemblyPath)) {
-    throw "SeesumAI.RevitMcpBridge.dll was not found in package: $assemblyPath"
+    $assemblyPath = Join-Path $payloadDir "RevitMcpBridge.dll"
+}
+if (-not (Test-Path -LiteralPath $assemblyPath)) {
+    throw "SeesumAI.RevitMcpBridge.dll or RevitMcpBridge.dll was not found in package: $payloadDir"
+}
+
+$actualVersion = [Reflection.AssemblyName]::GetAssemblyName($assemblyPath).Version.ToString()
+if ($actualVersion -ne [string]$versionInfo.latestVersion) {
+    throw "Package DLL version does not match version info. Expected: $($versionInfo.latestVersion) Actual: $actualVersion"
 }
 
 if ($AllUsers) {
@@ -152,6 +160,19 @@ $manifest = @"
 "@
 
 Set-Content -LiteralPath $manifestPath -Value $manifest -Encoding UTF8
+
+$oldPayloads = Get-ChildItem -LiteralPath $installDir -Directory -Filter "payload-*" -ErrorAction SilentlyContinue |
+    Where-Object { $_.FullName -ne $payloadDir } |
+    Sort-Object LastWriteTimeUtc -Descending |
+    Select-Object -Skip 1
+foreach ($oldPayload in $oldPayloads) {
+    try {
+        Remove-Item -LiteralPath $oldPayload.FullName -Recurse -Force
+    }
+    catch {
+        Write-Warning "Could not remove old payload: $($oldPayload.FullName)"
+    }
+}
 
 Write-Host ""
 Write-Host (New-UnicodeText @(0xC124, 0xCE58, 0xAC00, 0x20, 0xC644, 0xB8CC, 0xB418, 0xC5C8, 0xC2B5, 0xB2C8, 0xB2E4, 0x2E))
