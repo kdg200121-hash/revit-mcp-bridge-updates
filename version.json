@@ -5,7 +5,7 @@
     "minSupportedVersion":  "1.1.5.1",
     "minSupportedDisplayVersion":  "1.1.5a",
     "downloadUrl":  "https://github.com/kdg200121-hash/revit-mcp-bridge-updates",
-    "installerPackageUrl":  "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/main/RevitMcpBridge-package.zip",
+    "installerPackageUrl":  "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/f77f27f10636b4c9163525589e40436bc7a0cab0/RevitMcpBridge-package.zip",
     "installerPackageSha256":  "8D5D11C71A5865148F74B02849AB98FED5D14E4B53B44494E91BC9853BE9B9C5",
     "releaseNote":  "1.1.5a 업데이트: 업데이트 알림창과 필수 업데이트 창, 설치 진행 창에 업데이트 내용을 표시하도록 개선했습니다."
 }
