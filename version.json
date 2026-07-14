@@ -1,11 +1,11 @@
-{
-  "appName": "RevitMcpBridge",
-  "latestVersion": "1.1.4.0",
-  "latestDisplayVersion": "1.1.4",
-  "minSupportedVersion": "1.1.4.0",
-  "minSupportedDisplayVersion": "1.1.4",
-  "downloadUrl": "https://github.com/kdg200121-hash/revit-mcp-bridge-updates",
-  "installerPackageUrl": "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/98b9c404c611d91b4be441067a45ff6ed2303a9d/RevitMcpBridge-package.zip",
-  "installerPackageSha256": "613ADF0651C9AB08941B43E4792718A8B70D1443155B4DE4F96F9F027FA00461",
-  "releaseNote": "1.1.4 업데이트: 최신 Lookup Table CSV 기능과 업데이트 안정성, 패키지 무결성 검증을 반영했습니다."
+﻿{
+    "appName":  "RevitMcpBridge",
+    "latestVersion":  "1.1.5.0",
+    "latestDisplayVersion":  "1.1.5",
+    "minSupportedVersion":  "1.1.5.0",
+    "minSupportedDisplayVersion":  "1.1.5",
+    "downloadUrl":  "https://github.com/kdg200121-hash/revit-mcp-bridge-updates",
+    "installerPackageUrl":  "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/main/RevitMcpBridge-package.zip",
+    "installerPackageSha256":  "1A5EF338BFF13C8D6FF59C72F4D3D3B8C2C714500D26120F3DFD84F9303797BD",
+    "releaseNote":  "1.1.5 업데이트: 최신 웹뷰어 내보내기, Lookup Table CSV 개선, 업데이트 패키지 보완 사항을 반영했습니다."
 }
