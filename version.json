@@ -1,11 +1,11 @@
 {
-  "appName": "RevitMcpBridge",
-  "latestVersion": "1.2.1.0",
-  "latestDisplayVersion": "1.2.1",
-  "minSupportedVersion": "1.2.1.0",
-  "minSupportedDisplayVersion": "1.2.1",
-  "downloadUrl": "https://github.com/kdg200121-hash/revit-mcp-bridge-updates",
-  "installerPackageUrl": "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/533876b06da503d56641ce9bafd91dd65e3ca3ad/RevitMcpBridge-package.zip",
-  "installerPackageSha256": "310853100721B051AAEF585BB61BC7B62D6FDF14E560C13A8BD03AFBB3E2E35E",
-  "releaseNote": "1.2.1 업데이트: Modra 탭, Revit 문서 탭 색상·그룹·고정, 3D 뷰 이동·단축키, 평면 뷰 범위, 상부면 레벨 색상, 패밀리 매개변수 추출, 룩업 패밀리 유형 관리, 개인 매크로를 추가·개선했습니다."
+    "appName":  "RevitMcpBridge",
+    "latestVersion":  "1.2.2.0",
+    "latestDisplayVersion":  "1.2.2",
+    "minSupportedVersion":  "1.2.2.0",
+    "minSupportedDisplayVersion":  "1.2.2",
+    "downloadUrl":  "https://github.com/kdg200121-hash/revit-mcp-bridge-updates",
+    "installerPackageUrl":  "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/main/RevitMcpBridge-package.zip",
+    "installerPackageSha256":  "7F8E6D141F4F9FA37A137117E7D72EC452F16A1C141C2E7050C4CEE95311659F",
+    "releaseNote":  "1.2.2 업데이트: 문서 탭 매칭 안정화, 룩업 유형 동기화, 평면 뷰 범위 UI 재설계, 상부면 레벨 색상 표시(색상과 패턴), 시공영상 결과 만들기, 개인 매크로 신뢰성을 개선했습니다."
 }
