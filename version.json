@@ -1,11 +1,11 @@
 {
     "appName":  "RevitMcpBridge",
-    "latestVersion":  "1.2.2.0",
-    "latestDisplayVersion":  "1.2.2",
-    "minSupportedVersion":  "1.2.2.0",
-    "minSupportedDisplayVersion":  "1.2.2",
+    "latestVersion":  "1.2.3.0",
+    "latestDisplayVersion":  "1.2.3",
+    "minSupportedVersion":  "1.2.3.0",
+    "minSupportedDisplayVersion":  "1.2.3",
     "downloadUrl":  "https://github.com/kdg200121-hash/revit-mcp-bridge-updates",
-    "installerPackageUrl":  "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/1ca9163f82121791b8a65da059a3b773b5f14b2b/RevitMcpBridge-package.zip",
-    "installerPackageSha256":  "7F8E6D141F4F9FA37A137117E7D72EC452F16A1C141C2E7050C4CEE95311659F",
-    "releaseNote":  "1.2.2 업데이트: 문서 탭 매칭 안정화, 룩업 유형 동기화, 평면 뷰 범위 UI 재설계, 상부면 레벨 색상 표시(색상과 패턴), 시공영상 결과 만들기, 개인 매크로 신뢰성을 개선했습니다."
+    "installerPackageUrl":  "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/f3950d9a57dfb98f8dd79ced7fb7348c27176cb7/RevitMcpBridge-package.zip",
+    "installerPackageSha256":  "343FCF20D0C2FD195CE118261CCE0FBDB7BB19BE48FFFB4D8B5F18DFF633208F",
+    "releaseNote":  "1.2.3 업데이트: 현재 main에 통합된 최신 기능과 안정화 내용을 포함했습니다."
 }
