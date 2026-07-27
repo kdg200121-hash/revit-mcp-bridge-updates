@@ -1,11 +1,11 @@
 {
     "appName":  "RevitMcpBridge",
-    "latestVersion":  "1.2.3.0",
-    "latestDisplayVersion":  "1.2.3",
-    "minSupportedVersion":  "1.2.3.0",
-    "minSupportedDisplayVersion":  "1.2.3",
+    "latestVersion":  "1.2.4.0",
+    "latestDisplayVersion":  "1.2.4",
+    "minSupportedVersion":  "1.2.4.0",
+    "minSupportedDisplayVersion":  "1.2.4",
     "downloadUrl":  "https://github.com/kdg200121-hash/revit-mcp-bridge-updates",
-    "installerPackageUrl":  "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/f3950d9a57dfb98f8dd79ced7fb7348c27176cb7/RevitMcpBridge-package.zip",
-    "installerPackageSha256":  "343FCF20D0C2FD195CE118261CCE0FBDB7BB19BE48FFFB4D8B5F18DFF633208F",
-    "releaseNote":  "1.2.3 업데이트: 현재 main에 통합된 최신 기능과 안정화 내용을 포함했습니다."
+    "installerPackageUrl":  "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/5418f2d3db5e1b529481fd6131cd1e3acb1d398f/RevitMcpBridge-package.zip",
+    "installerPackageSha256":  "D12C759B50AE1E901E0BF8DE40D628A036F8E0C1B6DAB69083BCBE230C39F906",
+    "releaseNote":  "1.2.4 업데이트: 시공영상 캡처 작업 흐름과 Transaction hotfix를 반영했습니다."
 }
