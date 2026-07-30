@@ -1,11 +1,11 @@
 {
     "appName":  "RevitMcpBridge",
-    "latestVersion":  "1.2.5.0",
+    "latestVersion":  "1.2.6.0",
     "latestDisplayVersion":  "0.0.0",
-    "minSupportedVersion":  "1.2.5.0",
+    "minSupportedVersion":  "1.2.6.0",
     "minSupportedDisplayVersion":  "0.0.0",
     "downloadUrl":  "https://github.com/kdg200121-hash/revit-mcp-bridge-updates",
-    "installerPackageUrl":  "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/3e2710ea8c35ddf5ddba84bc7c9953c35403b6a2/RevitMcpBridge-package.zip",
-    "installerPackageSha256":  "7BF02646505BF3F6E3EC5B8D4BA8970AF566EC83C3853BAF74A8BC8D3D87CC72",
-    "releaseNote":  "유지 기능 8개와 공지만 제공하도록 정리했습니다. 개인 기능, 단축키, MCP, Web Viewer를 분리하고 시공 영상 PDF 런타임을 보강했습니다."
+    "installerPackageUrl":  "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/86cd5e2a6285bac3b8ab07ab79d20d0e088ca608/RevitMcpBridge-package.zip",
+    "installerPackageSha256":  "A94B7BD69AFC3D9D685643A6408BDFD8BBC8BB0DCEF8DCFBF8A36C1F6209BF93",
+    "releaseNote":  "시공 단계 복사/compact 삭제/객체 추가·빼기 편집/다른 단계 임시 숨김 복원 및 pending 경쟁 조건 보강."
 }
