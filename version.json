@@ -1,11 +1,11 @@
-{
+﻿{
     "appName":  "RevitMcpBridge",
-    "latestVersion":  "1.2.7.0",
+    "latestVersion":  "1.2.8.0",
     "latestDisplayVersion":  "0.0.0",
-    "minSupportedVersion":  "1.2.7.0",
+    "minSupportedVersion":  "1.2.8.0",
     "minSupportedDisplayVersion":  "0.0.0",
     "downloadUrl":  "https://github.com/kdg200121-hash/revit-mcp-bridge-updates",
-    "installerPackageUrl":  "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/6f1a52e4b9896225f2c8d802b79d7431c77b6562/RevitMcpBridge-package.zip",
-    "installerPackageSha256":  "DA64A243C18964E263FEB85F810CF11C4EEE99C6D21A5656D3EB51DFA961BA5D",
-    "releaseNote":  "1.2.6 시공 단계 변경을 이전 안정 버전 기능으로 롤백했습니다."
+    "installerPackageUrl":  "https://raw.githubusercontent.com/kdg200121-hash/revit-mcp-bridge-updates/bafa1af76a7de9ececf930c590f4d54f5b00c79f/RevitMcpBridge-package.zip",
+    "installerPackageSha256":  "ABDDC4634C2165205F158117E40716D3D186FB28296388C2745D9CBEE6B9AFC4",
+    "releaseNote":  "룩업 패밀리 유형 관리, 패밀리 매개변수 추출, Lookup Table CSV 수정 기능을 복구했습니다."
 }
